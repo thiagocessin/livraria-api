@@ -1,0 +1,4 @@
+spring:
+  datasource:    url: jdbc:h2:~/Documents/livrariadatabase;DB_CLOSE_ON_EXIT=FALSE
+    username: root
+    password: Mt@28121989
