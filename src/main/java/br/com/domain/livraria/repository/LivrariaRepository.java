@@ -11,8 +11,8 @@ public interface LivrariaRepository extends JpaRepository<Livro, Long>{
 	
 	List<Livro> findAllByTituloLike(String titulo);
 	
-	@Query("select l from livro l where l.titulo like :titulo")
-	List<Livro> buscarLivroPorTitulo(String titulo);
+	//@Query("select l from livro l where l.titulo like :titulo")
+	//List<Livro> buscarLivroPorTitulo(String titulo);
 	
 
 }
