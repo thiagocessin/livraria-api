@@ -10,7 +10,7 @@ public interface LivrariaService {
 	
 	List<LivroDTO> listarLivros(String titulo);
 	LivroDTO buscarLivroPorId(Long id);
-	LivroDTO criar(NovoLivroDTO novoLivroDTO);
+	LivroDTO saveOrUpdate(LivroDTO livroDTO);
 	LivroDTO atualizar(Long id, NovoLivroDTO novoLivroDTO);
 	LivroDTO atualizarPreco(Long id, NovoPrecoDTO novoPrecoDTO);
 	void deletarLivro(Long id);

@@ -39,7 +39,7 @@ public class LivrariaServiceImpl implements LivrariaService {
 		
 		return livrosList
 				.stream()
-				.map(l->new LivroDTO())
+				.map(Livro::toDto)
 				.collect(Collectors.toList());
 					
 	}
@@ -51,9 +51,8 @@ public class LivrariaServiceImpl implements LivrariaService {
 	}
 
 	@Override
-	public LivroDTO criar(NovoLivroDTO novoLivroDTO) {
-		// TODO Auto-generated method stub
-		return null;
+	public LivroDTO saveOrUpdate(LivroDTO livroDTO) {
+		return this.livrariaRepository.save(livroDTO.toEntity()).toDto();
 	}
 
 	@Override

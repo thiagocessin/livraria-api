@@ -61,8 +61,8 @@ public class LivrariaController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public LivroDTO createLivro(@RequestBody NovoLivroDTO newLivro) {
-		return livrariaService.criar(newLivro);
+	public LivroDTO createLivro(@RequestBody LivroDTO livroDTO) {
+		return livrariaService.saveOrUpdate(livroDTO);
 				
 	}
 	

@@ -3,6 +3,8 @@ package br.com.domain.livraria.dto;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
+import br.com.domain.livraria.entity.Livro;
+
 public class LivroDTO {
 	
 
@@ -13,6 +15,20 @@ public class LivroDTO {
 	private BigDecimal preco;
 	private ZonedDateTime dataLancamento;
 	private String autor;
+	
+	public Livro toEntity() {
+		Livro entity = new Livro();
+		entity.setId(id);
+		entity.setTitulo(titulo);
+		entity.setQtdePaginas(qtdePaginas);
+		entity.setIsbn(isbn);
+		entity.setPreco(preco);
+		entity.setDataLancamento(dataLancamento);
+		entity.setAutor(autor);
+		
+		return entity;
+	}
+	
 	public Long getId() {
 		return id;
 	}
